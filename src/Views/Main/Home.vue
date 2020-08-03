@@ -1,6 +1,6 @@
 <template>
     <div class="component">
-        Start
+        Start Page
     </div>
 </template>
 

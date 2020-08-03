@@ -22,7 +22,7 @@
             <div class="second-navbar">
               <router-link class="second-section_item" to="/" exact-active-class="header-active__link">Главная</router-link>
               <router-link class="second-section_item" to="/news" exact-active-class="header-active__link">Новости</router-link>
-              <router-link class="second-section_item" to="/viki" exact-active-class="header-active__link">Вики</router-link>
+              <router-link class="second-section_item" to="/wiki" exact-active-class="header-active__link">Вики</router-link>
               <router-link class="second-section_item" to="/people" exact-active-class="header-active__link">Сообщество</router-link>
               <router-link class="second-section_item" to="/something" exact-active-class="header-active__link">Что-то</router-link>
             </div>
