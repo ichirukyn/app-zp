@@ -25,6 +25,7 @@ const ifNotAuthenticated = (to, from, next) => {
 // }
 
 export default new Router({
+  mode: 'history',
   routes: [
     // Main
     {
