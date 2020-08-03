@@ -19,13 +19,13 @@
 }
 
 a:hover {
-    color: #fa1e4e;
-    text-shadow: 0 0 10px #fa1e4e;
+    color: #ff6100;
+    text-shadow: 0 0 10px #ff6100;
 }
 
 .header-active__link {
-    color: #fa1e4e;
-    text-shadow: 0 0 10px #fa1e4e;
+    color: #ff6100;
+    text-shadow: 0 0 10px #ff6100;
     background: #0f101e;
     box-shadow: 0 0 1px black;
 }
@@ -89,7 +89,7 @@ a:hover {
 }
 
 .first-section_item:hover {
-    color: #fa1e4e;
+    color: #ff6100;
 }
 
 .second-section {
@@ -228,8 +228,8 @@ a:hover {
 }
 
 .column__item a:hover {
-    color: #fa1e4e;
-    text-shadow: 0 0 10px #fa1e4e;
+    color: #ff6100;
+    text-shadow: 0 0 10px #ff6100;
 }
 
 .column__title-item {
