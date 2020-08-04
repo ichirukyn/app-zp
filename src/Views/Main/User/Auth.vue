@@ -4,12 +4,6 @@
         title="Авторизация | Zinderland"
         />
         <form class="form" @submit.prevent="authForm()">
-
-            <div class="danger-alert" v-if="this.GetUserAuthError">
-                <h3>Ошибка авторизации</h3>
-                <p>Логин или пароль введены неверно!</p>
-            </div>
-
             <div class="form__control">
                 <label for="login">Введите логин</label>
                 <input type="text" id="login" name="login" v-model="userLogin" placeholder="Логин.." class="form__control-input">
@@ -34,7 +28,7 @@
     import {mapGetters} from 'vuex';
 
     export default {
-        name: "Auth",
+        name: "NotFoundPage",
         data() {
             return {
                 userLogin: '',
@@ -46,16 +40,17 @@
         methods: {
             authForm: function () {
                 let Login = this.userLogin,
-                Pass = this.userPass;
+                    Pass = this.userPass;
                 this.$store.dispatch('UserAuth', [Login, Pass]);
-                
-                if (!this.GetUserAuthError) {
-                    this.authDone = true;
-                    this.$router.go(-1);
-                } else {
-                    this.authDone = false;
-                }
             }
         },
+        updated() {
+            if (localStorage.getItem('user_auth')) {
+                this.authDone = true;
+            }
+            if (this.GetUserAuthStatus) {
+                this.$router.push('/')
+            }
+        }
     }
 </script>

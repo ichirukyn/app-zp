@@ -5,12 +5,11 @@ import Home from '@/Views/Main/Home';
 import NotFoundPage from '@/Views/Main/NotFoundPage';
 
 import Auth from '@/Views/Main/User/Auth';
-import Register from '@/Views/Main/User/Register';
 
 Vue.use(Router);
 
 const ifNotAuthenticated = (to, from, next) => {
-  if (!localStorage.getItem('UserID') && !localStorage.getItem('UserAuth') && !localStorage.getItem('UserToken')) {
+  if (!localStorage.getItem('user_token')) {
     next();
     return;
   }
@@ -25,7 +24,6 @@ const ifNotAuthenticated = (to, from, next) => {
 //   next('/login')
 // }
 
-
 export default new Router({
   mode: 'history',
   routes: [
@@ -36,13 +34,6 @@ export default new Router({
       meta: {layout: 'Main'},
       component: Home,
     },
-    {
-      path: '/home',
-      name: 'Hometwo',
-      meta: {layout: 'Main'},
-      component: Home,
-      redirect: '/'
-    },
 
     // Auth
     {
@@ -52,17 +43,6 @@ export default new Router({
       component: Auth,
       beforeEnter: ifNotAuthenticated
     },
-
-    // Register
-    {
-      path: '/register',
-      name: 'Register',
-      meta: {layout: 'Main'},
-      component: Register,
-      beforeEnter: ifNotAuthenticated
-    },
-
-    // 404
     {
       path: '*',
       name: 'NotFoundPage',

@@ -92,7 +92,6 @@ a:hover {
 
 .first-section_item:hover {
     color: var(--hover-color);
-    cursor: pointer;
 }
 
 .second-section {
@@ -289,7 +288,7 @@ a:hover {
 /* Auth */
 
 .form {
-    max-width: 300px;
+    max-width: 250px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -358,15 +357,8 @@ a:hover {
     font-size: 13px;
 }
 
-.danger-alert {
-    background: #a60000;
-    padding: 10px;
-    margin-bottom: 10px;
-}
 
-.danger-alert h3 {
-    margin-bottom: 5px;
-}
+
 
 
 
